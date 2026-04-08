@@ -35,6 +35,13 @@ export function FormatSelector({ selectedFormats, onSelectedFormatsChange }: Pro
     onSelectedFormatsChange([...merged]);
   };
 
+  const allIds = storeFormats.map((f) => f.id);
+  const allSelected = allIds.every((id) => selectedFormats.includes(id));
+
+  const toggleAll = () => {
+    onSelectedFormatsChange(allSelected ? [] : allIds);
+  };
+
   const renderStore = (store: 'apple' | 'google', title: string) => {
     const categories = getFormatsByCategory(store);
     return (
@@ -71,8 +78,11 @@ export function FormatSelector({ selectedFormats, onSelectedFormatsChange }: Pro
     <div className="format-selector">
       <div className="format-header">
         <h3>Zielformate</h3>
+        <button className="btn-small" onClick={toggleAll}>
+          {allSelected ? 'Keine' : 'Alle'}
+        </button>
         <button className="btn-small" onClick={selectAllRequired}>
-          Alle Pflicht-Formate
+          Pflicht
         </button>
       </div>
       {renderStore('apple', 'Apple App Store')}
