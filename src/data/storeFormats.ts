@@ -384,11 +384,11 @@ export const storeFormats: StoreFormat[] = [
     id: 'google-feature-graphic',
     store: 'google',
     category: 'Promotional',
-    device: 'Feature Graphic',
+    device: 'Vorstellungsgrafik',
     width: 1024,
     height: 500,
     required: true,
-    description: 'Feature Graphic (Pflicht)',
+    description: 'Vorstellungsgrafik (Pflicht, PNG/JPEG, max. 15 MB)',
   },
   {
     id: 'google-icon',
