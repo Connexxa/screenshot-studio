@@ -358,25 +358,47 @@ export const storeFormats: StoreFormat[] = [
   },
 
   // ----- Tablets -----
+  // 7" Tablet: PNG/JPEG, 9:16 oder 16:9, max. 8 MB, 320–3840 px
   {
     id: 'google-tablet-7',
     store: 'google',
     category: 'Tablet',
-    device: '7" Tablet',
-    width: 1200,
+    device: '7" Tablet (Portrait 9:16)',
+    width: 1080,
     height: 1920,
     required: false,
-    description: '7-Zoll Tablet',
+    description: '7" Tablet (9:16, max. 8 MB, 320–3840 px)',
   },
+  {
+    id: 'google-tablet-7-land',
+    store: 'google',
+    category: 'Tablet',
+    device: '7" Tablet (Landscape 16:9)',
+    width: 1920,
+    height: 1080,
+    required: false,
+    description: '7" Tablet Landscape (16:9)',
+  },
+  // 10" Tablet: PNG/JPEG, 9:16 oder 16:9, max. 8 MB, 1080–7680 px
   {
     id: 'google-tablet-10',
     store: 'google',
     category: 'Tablet',
-    device: '10" Tablet',
-    width: 1800,
+    device: '10" Tablet (Portrait 9:16)',
+    width: 1440,
     height: 2560,
     required: false,
-    description: '10-Zoll Tablet',
+    description: '10" Tablet (9:16, max. 8 MB, 1080–7680 px)',
+  },
+  {
+    id: 'google-tablet-10-land',
+    store: 'google',
+    category: 'Tablet',
+    device: '10" Tablet (Landscape 16:9)',
+    width: 2560,
+    height: 1440,
+    required: false,
+    description: '10" Tablet Landscape (16:9)',
   },
 
   // ----- Promotional -----
