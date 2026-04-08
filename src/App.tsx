@@ -11,9 +11,9 @@ import { ExportPanel } from './components/ExportPanel';
 function App() {
   const [images, setImages] = useState<UploadedImage[]>([]);
   const [selectedFormats, setSelectedFormats] = useState<string[]>([
-    'apple-iphone-6.9',
-    'apple-ipad-13',
-    'google-phone',
+    'apple-iphone-6.9-1320',
+    'apple-ipad-13-2064',
+    'google-phone-1080-1920',
     'google-feature-graphic',
   ]);
   const [selectedFrameId, setSelectedFrameId] = useState<string | null>(
