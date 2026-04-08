@@ -36,7 +36,7 @@ export async function exportAll(
         format,
         imageIndex: i,
         blob,
-        filename: `screenshot_${String(i + 1).padStart(2, '0')}.png`,
+        filename: `screenshot_${String(i + 1).padStart(2, '0')}_${format.width}x${format.height}.png`,
       });
 
       current++;
